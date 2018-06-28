@@ -1,0 +1,29 @@
+
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "WebdriverIO Debug",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "--nolazy",
+                "run-script",
+                "test:e2e" // substitute with your test npm script
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "WDIO_DEBUG": "true",
+                "SPEC": "${file}" // uses the current file as the spec
+                // based on how your setup accepts spec you can additional
+                // use "${relativeFile}" instead
+            },
+            "port": 9229
+        }
+    ]
+}
