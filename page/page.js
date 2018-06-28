@@ -1,6 +1,8 @@
 class Page {
 	//selectors
-	get txtSearchInput() { return $('#docsearch input')}
+	get txtSearchInput() {
+		return $('#docsearch input');
+	}
 
 	//methods
 	getPageTitle() {
